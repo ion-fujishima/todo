@@ -1,0 +1,158 @@
+.todo-app {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.todo-app h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
+}
+
+.add-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.add-button:hover {
+  background-color: #535bf2;
+}
+
+.add-button:active {
+  transform: scale(0.98);
+}
+
+.stats {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.todo-item:hover {
+  background-color: #e9ecef;
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  cursor: pointer;
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #646cff;
+}
+
+.todo-text {
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  background-color: transparent;
+  color: #dc3545;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.delete-button:hover {
+  opacity: 1;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .todo-input {
+    background-color: #2a2a2a;
+    border-color: #444;
+  }
+
+  .todo-item {
+    background-color: #2a2a2a;
+  }
+
+  .todo-item:hover {
+    background-color: #333;
+  }
+}
